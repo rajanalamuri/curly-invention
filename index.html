@@ -3,90 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Curly Invention</title>
+    <title>Curly Invention | MLOps Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; color: #222; }
-        .container { max-width: 700px; margin: auto; background: #fff; padding: 2em; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
-        h1 { color: #2d7dd2; }
-        p { font-size: 1.2em; }
-        footer { margin-top: 2em; color: #888; font-size: 0.9em; }
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --primary: #38bdf8;
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+            --accent-green: #4ade80;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            padding: 2rem 1rem; 
+            background-color: var(--bg-color); 
+            background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
+            color: var(--text-main); 
+            line-height: 1.6;
+        }
+
+        .container { 
+            max-width: 1000px; 
+            margin: auto; 
+            background: var(--card-bg); 
+            padding: 3rem; 
+            border-radius: 16px; 
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        header { border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem; padding-bottom: 1rem; }
+        
+       h1 { 
+            font-size: 2.5rem; 
+            font-weight: 700; 
+            margin: 0; 
+            background: linear-gradient(to right, #38bdf8, #818cf8); 
+            
+            /* 1. Vendor prefix for Safari, Chrome, and Edge */
+            -webkit-background-clip: text; 
+            
+            /* 2. Standard property for modern compatibility */
+            background-clip: text; 
+            
+            /* 3. Ensures the text itself is see-through so the background shows */
+            -webkit-text-fill-color: transparent; 
+            color: transparent; 
+        }
+        .subtitle { font-size: 1.1rem; color: var(--text-dim); margin-top: 0.5rem; }
+
+        /* SVG Diagram Styling */
+        .mlops-diagram svg { width: 100%; height: auto; border-radius: 12px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3)); }
+        .mlops-diagram a rect { transition: all 0.3s ease; fill: #1e293b; stroke: #334155; }
+        .mlops-diagram a:hover rect { stroke: var(--primary); fill: #334155; filter: brightness(1.2); }
+        .mlops-diagram a text { fill: #94a3b8; font-size: 14px; pointer-events: none; transition: fill 0.3s; }
+        .mlops-diagram a:hover text { fill: #fff; font-weight: 600; }
+        .mlops-diagram .title { fill: var(--text-main); font-weight: 600; }
+
+        /* Grid Layout for Content */
+        .structure-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 1.5rem; 
+            margin-top: 2rem; 
+        }
+
+        .card { 
+            background: rgba(15, 23, 42, 0.5); 
+            padding: 1.5rem; 
+            border-radius: 12px; 
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .card h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        .card p { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 0; }
+
+        footer { 
+            margin-top: 3rem; 
+            text-align: center; 
+            color: var(--text-dim); 
+            font-size: 0.85rem; 
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+        }
+
+        footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 600px) {
+            .container { padding: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-                <style>
-                        .mlops-diagram svg { max-width: 100%; height: auto; display: block; margin: 0 auto 2em auto; }
-                        .mlops-diagram a:hover rect, .mlops-diagram a:focus rect { stroke: #1976d2; stroke-width: 4; filter: drop-shadow(0 0 8px #1976d2aa); }
-                        .mlops-diagram a:hover text, .mlops-diagram a:focus text { fill: #1976d2; font-weight: bold; }
-                        .mlops-diagram a rect { transition: stroke 0.2s, filter 0.2s; }
-                        .mlops-diagram a text { transition: fill 0.2s, font-weight 0.2s; }
-                        .mlops-diagram .label { font-size: 18px; font-family: 'Segoe UI', Arial, sans-serif; }
-                        .mlops-diagram .title { font-size: 28px; font-weight: bold; fill: #2d7dd2; font-family: 'Segoe UI', Arial, sans-serif; }
-                </style>
-                <div class="mlops-diagram">
-                    <svg viewBox="0 0 1100 420" xmlns="http://www.w3.org/2000/svg" aria-label="MLOps Interactive Modules">
-                        <text x="550" y="40" text-anchor="middle" class="title">MLOps Interactive Modules</text>
-                        <!-- Row 1 -->
-                        <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/data_collection" target="_blank">
-                            <rect x="40" y="70" width="180" height="60" rx="14" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
-                            <text x="130" y="110" text-anchor="middle" class="label">Data Collection</text>
-                        </a>
-                        <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/configuration" target="_blank">
-                            <rect x="250" y="70" width="180" height="60" rx="14" fill="#fffde7" stroke="#fbc02d" stroke-width="2"/>
-                            <text x="340" y="110" text-anchor="middle" class="label">Configuration</text>
-                        </a>
-                        <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/automation" target="_blank">
-                            <rect x="460" y="70" width="180" height="60" rx="14" fill="#e8f5e9" stroke="#43a047" stroke-width="2"/>
-                            <text x="550" y="110" text-anchor="middle" class="label">Automation</text>
-                        </a>
-                        <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/feature_engineering" target="_blank">
-                            <rect x="670" y="70" width="180" height="60" rx="14" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2"/>
-                            <text x="760" y="110" text-anchor="middle" class="label">Feature Engineering</text>
-                        </a>
-                        <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/testing_and_debugging" target="_blank">
-                            <rect x="880" y="70" width="180" height="60" rx="14" fill="#fbe9e7" stroke="#d84315" stroke-width="2"/>
-                            <text x="970" y="110" text-anchor="middle" class="label">Testing & Debugging</text>
-                        </a>
-                        <!-- Row 2 -->
-                        <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/resource_management" target="_blank">
-                            <rect x="40" y="180" width="180" height="60" rx="14" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
-                            <text x="130" y="220" text-anchor="middle" class="label">Resource Management</text>
-                        </a>
-                        <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/model_analysis" target="_blank">
-                            <rect x="250" y="180" width="180" height="60" rx="14" fill="#f9fbe7" stroke="#afb42b" stroke-width="2"/>
-                            <text x="340" y="220" text-anchor="middle" class="label">Model Analysis</text>
-                        </a>
-                        <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/process_management" target="_blank">
-                            <rect x="460" y="180" width="180" height="60" rx="14" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-                            <text x="550" y="220" text-anchor="middle" class="label">Process Management</text>
-                        </a>
-                        <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/metadata_management" target="_blank">
-                            <rect x="670" y="180" width="180" height="60" rx="14" fill="#ede7f6" stroke="#512da8" stroke-width="2"/>
-                            <text x="760" y="220" text-anchor="middle" class="label">Metadata Management</text>
-                        </a>
-                        <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/serving_infrastructure" target="_blank">
-                            <rect x="880" y="180" width="180" height="60" rx="14" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
-                            <text x="970" y="220" text-anchor="middle" class="label">Serving Infrastructure</text>
-                        </a>
-                        <!-- Row 3 -->
-                        <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/monitoring" target="_blank">
-                            <rect x="460" y="290" width="180" height="60" rx="14" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/>
-                            <text x="550" y="330" text-anchor="middle" class="label">Monitoring</text>
-                        </a>
-                    </svg>
+        <header>
+            <h1>Curly Invention</h1>
+            <div class="subtitle">Production-Grade MLOps Orchestration Platform</div>
+        </header>
+
+        <section class="mlops-diagram">
+            <svg viewBox="0 0 1100 420" xmlns="http://www.w3.org/2000/svg">
+                <text x="550" y="40" text-anchor="middle" class="title" style="font-size: 24px;">Interactive Architecture Overview</text>
+                
+                <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/data_collection" target="_blank">
+                    <rect x="40" y="70" width="180" height="60" rx="8"/>
+                    <text x="130" y="105" text-anchor="middle">Data Collection</text>
+                </a>
+                <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/configuration" target="_blank">
+                    <rect x="250" y="70" width="180" height="60" rx="8"/>
+                    <text x="340" y="105" text-anchor="middle">Configuration</text>
+                </a>
+                <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/automation" target="_blank">
+                    <rect x="460" y="70" width="180" height="60" rx="8"/>
+                    <text x="550" y="105" text-anchor="middle">Automation</text>
+                </a>
+                <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/feature_engineering" target="_blank">
+                    <rect x="670" y="70" width="180" height="60" rx="8"/>
+                    <text x="760" y="105" text-anchor="middle">Feature Engineering</text>
+                </a>
+                <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/testing_and_debugging" target="_blank">
+                    <rect x="880" y="70" width="180" height="60" rx="8"/>
+                    <text x="970" y="105" text-anchor="middle">Testing & Debugging</text>
+                </a>
+
+                <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/resource_management" target="_blank">
+                    <rect x="40" y="180" width="180" height="60" rx="8"/>
+                    <text x="130" y="215" text-anchor="middle">Resource Management</text>
+                </a>
+                <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/model_analysis" target="_blank">
+                    <rect x="250" y="180" width="180" height="60" rx="8"/>
+                    <text x="340" y="215" text-anchor="middle">Model Analysis</text>
+                </a>
+                <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/process_management" target="_blank">
+                    <rect x="460" y="180" width="180" height="60" rx="8"/>
+                    <text x="550" y="215" text-anchor="middle">Process Management</text>
+                </a>
+                <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/metadata_management" target="_blank">
+                    <rect x="670" y="180" width="180" height="60" rx="8"/>
+                    <text x="760" y="215" text-anchor="middle">Metadata Mgmt</text>
+                </a>
+                <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/serving_infrastructure" target="_blank">
+                    <rect x="880" y="180" width="180" height="60" rx="8"/>
+                    <text x="970" y="215" text-anchor="middle">Serving Infrastructure</text>
+                </a>
+
+                <a href="https://github.com/rajanalamuri/curly-invention/tree/main/mlops/monitoring" target="_blank">
+                    <rect x="460" y="290" width="180" height="60" rx="8"/>
+                    <text x="550" y="325" text-anchor="middle">Monitoring</text>
+                </a>
+            </svg>
+        </section>
+
+        <section>
+            <p style="margin-top: 2rem;">A comprehensive framework designed to streamline the machine learning lifecycle, from automated data ingestion to scalable serving infrastructure.</p>
+            
+            <div class="structure-grid">
+                <div class="card">
+                    <h3>Data Ingestion</h3>
+                    <p>Robust scripts and configurations for automated data collection and validation.</p>
                 </div>
-        <h1>Curly Invention: MLOps Platform</h1>
-        <p>Welcome to the Curly Invention MLOps project. This site provides an overview of the main components and structure of our MLOps pipeline.</p>
-        <h2>MLOps Structure</h2>
-        <ul>
-            <li><strong>Data Ingestion</strong>: Scripts and configs for data collection and ingestion.</li>
-            <li><strong>Dataset Versioning</strong>: Tools and metadata for dataset versioning.</li>
-            <li><strong>Model Registry</strong>: Model tracking and registry files.</li>
-            <li><strong>ML Code</strong>: ML model code, training, and evaluation scripts.</li>
-            <li><strong>Software Engineering</strong>: Supporting utilities, CI/CD, and infrastructure code.</li>
-        </ul>
+                <div class="card">
+                    <h3>Dataset Versioning</h3>
+                    <p>End-to-end tracking and metadata management for reproducible data lineage.</p>
+                </div>
+                <div class="card">
+                    <h3>Model Registry</h3>
+                    <p>Centralized tracking of model experiments, artifacts, and versioning.</p>
+                </div>
+                <div class="card">
+                    <h3>ML Engineering</h3>
+                    <p>Optimized training scripts, evaluation logic, and hyperparameter tuning.</p>
+                </div>
+                <div class="card">
+                    <h3>DevOps & CI/CD</h3>
+                    <p>Infrastructure as Code (IaC) and automated pipelines for seamless deployment.</p>
+                </div>
+            </div>
+        </section>
+
         <footer>
-            &copy; 2026 Curly Invention &mdash; <a href="https://github.com/rajanalamuri/curly-invention" target="_blank">GitHub Repo</a>
+            &copy; 2026 Curly Invention &bull; Designed by <a href="https://github.com/rajanalamuri" target="_blank">Rajan Alamuri</a> &bull; <a href="https://github.com/rajanalamuri/curly-invention" target="_blank">View Repository</a>
         </footer>
     </div>
 </body>
