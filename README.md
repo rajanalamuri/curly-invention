@@ -140,6 +140,49 @@ This approach works well until:
 
 At that point, consider DVC or MLflow.
 
+## Next Steps (B2B SaaS Roadmap)
+
+### Phase 1: Cloud & Collaboration
+- [ ] **Web UI** — Dashboard for browsing versions, comparing diffs, managing lineage
+- [ ] **GitHub Actions / CI/CD** — Auto-test on pushes, lint manifests, verify checksums
+- [ ] **Cloud Storage Backends** — GCS, Azure Blob Storage alongside S3
+- [ ] **Role-Based Access Control** — Teams, projects, permissions
+
+### Phase 2: Enterprise Features
+- [ ] **Audit Logging** — Who accessed/modified which versions, when
+- [ ] **Webhooks** — Trigger ML pipelines on version creation
+- [ ] **Data Retention Policies** — Auto-cleanup old versions
+- [ ] **Cost Tracking** — Storage/compute usage per dataset version
+- [ ] **Compliance** — SOC 2, HIPAA-ready, data residency controls
+
+### Phase 3: Intelligence & Optimization
+- [ ] **ML Insights** — Correlation between dataset changes and model performance
+- [ ] **Automatic Anomaly Detection** — Flag unusual class distributions or drift
+- [ ] **Dataset Recommendations** — Suggest which version to train on based on recent changes
+- [ ] **Deduplication** — Identify and merge near-identical frames across versions
+
+### Target Customers
+- **Autonomous vehicles** (Tesla, Waymo competitors) — need reproducible training data
+- **Robotics companies** — managing sensor data across fleet
+- **Medical imaging** — regulatory/compliance-heavy, audit trail critical
+- **Computer vision startups** — MVPs that will grow into multi-team orgs
+
 ## License
 
-MIT
+This software is licensed under the **Business Source License 1.1 (BSL 1.1)**.
+
+**Key terms:**
+- ✓ **Free to use** for individuals, academic research, and internal non-commercial use
+- ✓ **Study and modify** the source code for your own purposes
+- ✗ **Cannot redistribute** the software or derivatives as a competing product
+- ✗ **Cannot use commercially** without a commercial license from Canopy Security
+
+For commercial use, licensing inquiries, or to discuss custom terms, contact: raj@canopy.security
+
+### What This Means
+You can use this code in your internal ML pipelines. You cannot:
+- Offer this as a SaaS to other companies
+- Resell or redistribute this software
+- Build a competing product with substantially similar code
+
+See [LICENSE](LICENSE) for full terms.

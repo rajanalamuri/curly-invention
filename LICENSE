@@ -1,21 +1,132 @@
-MIT License
+Business Source License 1.1
 
-Copyright (c) 2026 Raj Alamuri
+License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+"Business Source License" is a trademark of MariaDB Corporation Ab.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Parameters
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Licensor: Canopy Security
+
+Licensed Work: Dataset Manifest Versioning
+             The Licensed Work is (c) 2026 Raj Alamuri
+
+Additional Use Grant: None
+
+Change Date: 2027-05-15
+
+Change License: MIT
+
+For information about alternative licensing arrangements for the Licensed Work,
+please contact the Licensor at: raj@canopy.security
+
+Notice
+
+Business Source License 1.1
+
+Terms
+
+The Licensor hereby grants you the right to copy, modify, create derivative
+works, and distribute the Licensed Work. Doing so on behalf of an entity, you
+represent that you are legally authorized to bind the entity to these terms and
+conditions.
+
+"Affiliate" means any entity which directly or indirectly controls, is controlled
+by, or under common control with Licensor. "Control" means the power to direct
+the establishment, management, and operations of an entity, whether by contract
+or otherwise, or the ownership of 50% (fifty percent) or more of the outstanding
+shares, or the equivalent.
+
+"Change Date" means 2027-05-15.
+
+"Change License" means the MIT License, approved as of the date such license is
+listed at https://opensource.org/licenses
+
+"Licensed Work" means the work of authorship, made available under this License
+as indicated by a copyright notice that is included in or attached to the work.
+
+"Licensor" means the entity granting rights under this License.
+
+"Licensee" means the individual or entity exercising permissions granted by this
+License.
+
+Conditions
+
+1. Before Change Date
+
+   1.1 License Grant
+
+   The Licensor hereby grants you the right to copy, modify, create derivative
+   works, and distribute the Licensed Work, including for any commercial purpose,
+   subject to the conditions in Section 2 below.
+
+   1.2 Fair Use Exception
+
+   Licensee may use the Licensed Work for the following purposes without
+   restriction:
+
+   a) Study and research purposes
+   b) Educational purposes
+   c) Internal non-commercial use
+   d) Use as part of larger derivative works where the Licensed Work is not
+      substantially the entire derivative work
+
+   1.3 Commercial Use Restrictions
+
+   You may not make the Licensed Work, or any derivative work based on the
+   Licensed Work, available to third parties in a commercial context.
+   "Commercial context" means any use intended for, directed toward, or designed
+   to generate commercial advantage or private monetary compensation, including
+   but not limited to:
+
+   a) SaaS offerings or services based on the Licensed Work
+   b) Redistributing or reselling the Licensed Work
+   c) Offering the Licensed Work as a managed service
+   d) Using the Licensed Work as a component of a competing product or service
+
+   If you intend any commercial use, you must obtain a commercial license from
+   the Licensor before proceeding.
+
+2. After Change Date
+
+   The rights granted herein will automatically convert to the Change License on
+   the Change Date. You may use the Licensed Work under the terms of the Change
+   License (MIT) at any time after the Change Date.
+
+3. Conditions
+
+   3.1 No Other Rights
+
+   This License does not grant you the right to use the trade names, trademarks,
+   service marks, or product names of the Licensor, except as reasonably required
+   for ordinary use in describing the origin of the Licensed Work.
+
+   3.2 Restrictions
+
+   If you violate any condition of this License, your rights will terminate
+   immediately and automatically.
+
+4. Termination for Patent Action
+
+   If Licensee initiates litigation against any entity by asserting that the
+   Licensed Work infringes a patent, then the rights granted to Licensee under
+   this License shall terminate as of the date such litigation is commenced.
+
+5. Disclaimer
+
+   THE LICENSED WORK IS PROVIDED ON AN "AS IS" BASIS WITHOUT WARRANTIES OR
+   CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT
+   LIMITATION, ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT,
+   MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE.
+
+6. Limitation of Liability
+
+   IN NO EVENT SHALL LICENSOR BE LIABLE TO LICENSEE FOR DAMAGES, INCLUDING ANY
+   DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT
+   OF THIS LICENSE OR THE USE OF THE LICENSED WORK, EVEN IF LICENSOR HAS BEEN
+   ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+7. Acceptance
+
+   By using the Licensed Work, you accept and agree to be bound by the terms
+   and conditions of this License.
