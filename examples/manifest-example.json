@@ -1,0 +1,49 @@
+{
+  "version": "dataset-v1.2.3",
+  "created_at": "2026-05-11T09:30:00+00:00",
+  "source_batches": [
+    "raw-data/batch-2026-05-08/",
+    "raw-data/batch-2026-05-09/",
+    "raw-data/batch-2026-05-10/"
+  ],
+  "transformations": [
+    "removed frames with timestamp gaps > 5s",
+    "filtered out frames with <3 modalities",
+    "normalized timestamps to UTC"
+  ],
+  "output_location": "s3://datasets/training/dataset-v1.2.3/",
+  "metadata": {
+    "total_frames": 45000,
+    "total_size_gb": 247,
+    "class_distribution": {
+      "class_a": 0.42,
+      "class_b": 0.31,
+      "class_c": 0.27
+    },
+    "split": {
+      "train": 0.75,
+      "val": 0.15,
+      "test": 0.10
+    }
+  },
+  "checksums": {
+    "train_split": "sha256:abc123def456ghi789",
+    "val_split": "sha256:def456ghi789jkl012",
+    "test_split": "sha256:ghi789jkl012mno345"
+  },
+  "lineage": {
+    "previous_version": "dataset-v1.2.2",
+    "reason_for_update": "added 3 new batches, filtered corrupt frames",
+    "transformations_applied": [
+      {
+        "name": "filter_corrupt_frames",
+        "removed_frames": 15,
+        "reason": "timestamp gaps > 5 seconds"
+      },
+      {
+        "name": "normalize_timestamps",
+        "modified_frames": 44985
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+stages:
+  - test
+  - data-processing
+
+variables:
+  PYTHON_VERSION: "3.10"
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+test:
+  stage: test
+  image: python:${PYTHON_VERSION}
+  script:
+    - pip install -e .
+    - pip install pytest
+    - pytest tests/ -v
+  only:
+    - merge_requests
+    - main
+
+create-dataset-manifest:
+  stage: data-processing
+  image: python:${PYTHON_VERSION}
+  script:
+    - pip install -e .
+    - pip install boto3
+    - python scripts/create_manifest.py
+  variables:
+    DATASET_VERSION: "dataset-v1.0.0"
+    S3_BUCKET: "datasets"
+    S3_PREFIX: "training/"
+  only:
+    - main
+  after_script:
+    - echo "Manifest created for version $DATASET_VERSION"
+    - echo "Location: s3://$S3_BUCKET/$S3_PREFIX$DATASET_VERSION/manifest.json"
