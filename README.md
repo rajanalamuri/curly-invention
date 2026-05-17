@@ -175,9 +175,9 @@ This software is licensed under the **Business Source License 1.1 (BSL 1.1)**.
 - ✓ **Free to use** for individuals, academic research, and internal non-commercial use
 - ✓ **Study and modify** the source code for your own purposes
 - ✗ **Cannot redistribute** the software or derivatives as a competing product
-- ✗ **Cannot use commercially** without a commercial license from Canopy Security
+- ✗ **Cannot use commercially** 
 
-For commercial use, licensing inquiries, or to discuss custom terms, contact: raj@canopy.security
+For commercial use, licensing inquiries, or to discuss custom terms, contact: rajanalamuri@gmail.com
 
 ### What This Means
 You can use this code in your internal ML pipelines. You cannot:
